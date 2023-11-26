@@ -1,6 +1,5 @@
-from api_request import make_request
-
-from src.config import Config
+from src.api.api_request import make_request
+from src.api.config import Config
 config = Config()
 news_api_key = config.get("NEWSAPI")
 
@@ -13,4 +12,4 @@ params = {
     "apiKey": news_api_key,
 }
 
-make_request(url, params)
+make_request(url, params, "articles")
